@@ -31,7 +31,7 @@ public class S_11b {
         }
         z = in.nextDouble();
 
-        a = (3 + Math.pow(Math.E, y - 1)) / (1 + Math.pow(x, 2) * Math.abs(y - Math.tan(z)));
+        a = (3 + Math.exp(y - 1)) / (1 + Math.pow(x, 2) * Math.abs(y - Math.tan(z)));
         b = 1 + Math.abs(y - x)+ (Math.pow(y - x, 2) / 2) + (Math.pow(Math.abs(y - x), 3) / 3);
 
         System.out.println("a = " + a + "; b = " + b + ";");
