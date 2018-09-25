@@ -1,8 +1,8 @@
-package Sergei.paragraph_1;
+package Variant_9.Paragraph_1;
 
 import java.util.Scanner;
 
-public class task_9 {
+public class S_09 {
 
     public static void main(String args[]){
 
