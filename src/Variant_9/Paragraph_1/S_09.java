@@ -1,35 +1,15 @@
 package Variant_9.Paragraph_1;
 
-import java.util.Scanner;
+import Helpers.STools;
 
 public class S_09 {
-
     public static void main(String args[]){
 
         double R1, R2, R3, R;
 
-        Scanner in = new Scanner(System.in);
-
-            System.out.print("Введите первое сопротивление: ");
-            while(!in.hasNextDouble()){
-                System.out.println("Введите первое сопротивление в Double!");
-                in.next();
-            }
-            R1 = in.nextDouble();
-
-            System.out.print("Введите второе сопротивление: ");
-            while(!in.hasNextDouble()){
-                System.out.println("Введите второе сопротивление в Double!");
-                in.next();
-            }
-            R2 = in.nextDouble();
-
-            System.out.print("Введите третье сопротивление: ");
-            while(!in.hasNextDouble()){
-                System.out.println("Введите третье сопротивление в Double!");
-                in.next();
-            }
-            R3 = in.nextDouble();
+        R1 = STools.readDouble("Введите первое сопротивление: ");
+        R2 = STools.readDouble("Введите второе сопротивление: ");
+        R3 = STools.readDouble("Введите третье сопротивление: ");
 
 
         R = 1 / (1 / R1 + 1 / R2 + 1 / R3);
