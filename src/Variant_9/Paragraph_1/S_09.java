@@ -3,6 +3,7 @@ package Variant_9.Paragraph_1;
 import Helpers.STools;
 
 public class S_09 {
+
     public static void main(String args[]){
 
         double R1, R2, R3, R;
