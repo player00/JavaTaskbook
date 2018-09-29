@@ -4,6 +4,12 @@ import java.util.Scanner;
 
 public class STools {
 
+    /**
+     * Метод для ввода действительного числа
+     *
+     * @param text Сообщение перед вводом
+     * @return double
+     */
     public static double readDouble(String text){
         Scanner in = new Scanner(System.in);
         System.out.println(text);
@@ -14,6 +20,12 @@ public class STools {
         return in.nextDouble();
     }
 
+    /**
+     * Метод для ввода натурального числа
+     *
+     * @param text Сообщение перед вводом
+     * @return int
+     */
     public static int readNaturalNumber(String text){
         Scanner in = new Scanner(System.in);
         int number;
@@ -28,6 +40,13 @@ public class STools {
         return number;
     }
 
+    /**
+     * Метод для ввода натурального числа с верхней границей
+     *
+     * @param text Сообщение перед вводом
+     * @param max Верхняя граница вводимого числа
+     * @return int
+     */
     public static int readNaturalNumber(String text, int max){
         Scanner in = new Scanner(System.in);
         int number;
@@ -42,6 +61,14 @@ public class STools {
         return number;
     }
 
+    /**
+     * Метод для ввода натурального числа в заданном диапазоне
+     *
+     * @param text Сообщение перед вводом
+     * @param min Нижняя граница диапазона
+     * @param max Верхняя граница диапазона
+     * @return int
+     */
     public static int readNaturalNumber(String text, int min, int max){
         Scanner in = new Scanner(System.in);
         int number;
