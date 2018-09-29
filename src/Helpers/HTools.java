@@ -74,14 +74,14 @@ public class HTools {
     }
 
     /**
-     * Получает действетельное число с консоли.
+     * Получает целое число с консоли.
      *
-     * @return double
+     * @return int
      */
-    public static double readInt() {
+    public static int readInt() {
         System.out.println("Введите целое число");
 
-        return checkDouble(in);
+        return checkInt(in);
     }
 
     /**
