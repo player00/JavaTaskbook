@@ -122,4 +122,21 @@ public class HTools {
 
         return num;
     }
+    /**
+     * Получает натуральное число с консоли.
+     *
+     * @return double
+     */
+    public static int readNatural(String text) {
+        System.out.println(text);
+
+        int num = checkInt(in);
+
+        while (num < 1) {
+            System.out.println("Вы ввели не правильно, попробуйте повторить");
+            num = in.nextInt();
+        }
+
+        return num;
+    }
 }
