@@ -1,19 +1,18 @@
 package Variant_9.Paragraph_5;
 
-import Helpers.HTools;
-
 public class H_145v {
 
     public static void main(String args[]) {
-        int n = HTools.readNatural();
-        double[] b = new double[n];
+        int n = 20;
+        long[] x = new long[n];
 
-        for (int i = 1; i <= n; i++) {
-            b[i-1] = i * i;
+        x[0] = x[1] = x[2] = 1;
+
+        for (int i = 3; i < n; i++) {
+            x[i] = (i+1 + 3) * (x[i - 2] - 1) + (i+1 + 4) * x[i - 3];
         }
-
-        for (int i = 0; i < n; i++) {
-            System.out.println("b[" + (i + 1) + "]=" + b[i]);
+        for (int i =0 ;i<n;i++){
+            System.out.println("x[" + (i + 1) + "]=" + x[i]);
         }
     }
 
