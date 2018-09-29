@@ -82,4 +82,17 @@ public class STools {
         } while ((number <= 0) || (number > max) || (number < min));
         return number;
     }
+
+    /**
+     * Вычисляет факториал числа n
+     *
+     * @param n Число
+     * @return int
+     */
+    public static int factorial(int n)
+    {
+        if (n == 0) return 1;
+        return n * factorial(n-1);
+    }
+
 }
