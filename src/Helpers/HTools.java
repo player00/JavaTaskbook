@@ -57,6 +57,26 @@ public class HTools {
      *
      * @param text Сообщение которое нужно вывести перед вводом
      * @param min  Минимальное допустимое
+     * @return double
+     */
+    public static double readDouble(String text, double min) {
+        System.out.println(text + " больше " + min);
+
+        double num = checkDouble(in);
+
+        while (num < min) {
+            System.out.println("Вы ввели не правильно, попробуйте повторить");
+            num = in.nextDouble();
+        }
+
+        return num;
+    }
+
+    /**
+     * Получает действетельное число с консоли.
+     *
+     * @param text Сообщение которое нужно вывести перед вводом
+     * @param min  Минимальное допустимое
      * @param max  Максимальное допустимое
      * @return double
      */
@@ -122,6 +142,7 @@ public class HTools {
 
         return num;
     }
+
     /**
      * Получает натуральное число с консоли.
      *
