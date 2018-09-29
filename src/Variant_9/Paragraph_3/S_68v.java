@@ -6,26 +6,18 @@ public class S_68v {
 
     public static void main(String[] args) {
 
-        int n;
-        char[] numArray;
-        boolean flag = false;
+        int n, n1, n2, n3, n4;
 
         n = STools.readNaturalNumber("Введите натуральное число меньше 10000: ", 9999);
 
-        numArray = Integer.toString(n).toCharArray();
+        n1 = n % 10;
+        n2 = n / 10 % 10;
+        n3 = n / 100 % 10;
+        n4 = n / 1000 % 10;
 
-        for(int i = 0; i < numArray.length; i++) {
-            for (int j = 0; j < numArray.length; j++) {
-                if (j == i) continue;
-                if (numArray[j] == numArray[i]) {
-                    flag = true;
-                    break;
-                }
-            }
-        }
-        if (flag)
-            System.out.println("Есть повторяющиеся цифры!");
+        if ((n1 != n2) && (n1 != n3) && (n1 != n4) && (n2 != n3) && (n2 != n4) && (n3 != n4))
+            System.out.printf("В числе %04d нет повторяющихся цифр!",n);
         else
-            System.out.println("Нет повторяющихся цифр!");
+            System.out.printf("В числе %04d есть повторяющиеся цифры!",n);
     }
 }
