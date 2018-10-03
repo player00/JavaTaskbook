@@ -21,6 +21,49 @@ public class STools {
     }
 
     /**
+     * Метод для ввода натурального числа в заданном диапазоне
+     *
+     * @param text Сообщение перед вводом
+     * @param min Нижняя граница диапазона
+     * @param max Верхняя граница диапазона
+     * @return double
+     */
+    public static double readDouble(String text, double min, double max){
+        Scanner in = new Scanner(System.in);
+        double number;
+        do {
+            System.out.println(text);
+            while (!in.hasNextDouble()) {
+                System.out.println("Введите число типа double!");
+                in.next();
+            }
+            number = in.nextDouble();
+        } while ((number <= 0) || (number > max) || (number < min));
+        return number;
+    }
+
+    /**
+     * Метод для ввода натурального числа в заданном диапазоне
+     *
+     * @param text Сообщение перед вводом
+     * @param min Нижняя граница диапазона
+     * @return double
+     */
+    public static double readDouble(String text, double min){
+        Scanner in = new Scanner(System.in);
+        double number;
+        do {
+            System.out.println(text);
+            while (!in.hasNextDouble()) {
+                System.out.println("Введите число типа double!");
+                in.next();
+            }
+            number = in.nextDouble();
+        } while ((number <= 0) || (number < min));
+        return number;
+    }
+
+    /**
      * Метод для ввода целого числа
      *
      * @param text Сообщение перед вводом
