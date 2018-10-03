@@ -21,6 +21,22 @@ public class STools {
     }
 
     /**
+     * Метод для ввода целого числа
+     *
+     * @param text Сообщение перед вводом
+     * @return int
+     */
+    public static int readInt(String text){
+        Scanner in = new Scanner(System.in);
+        System.out.println(text);
+        while(!in.hasNextInt()){
+            System.out.println("Введите число типа int!");
+            in.next();
+        }
+        return in.nextInt();
+    }
+
+    /**
      * Метод для ввода натурального числа
      *
      * @param text Сообщение перед вводом
