@@ -17,10 +17,10 @@ public class S_194 {
             x[i] = STools.readInt("Введите x[" + i + "]");
         }
 
-        for (int i=0;i<n-1;i++){
-            if(x[i] == a){
+        for (int i = 0; i < n - 1; i++) {
+            if (x[i] == a) {
                 sum = 0;
-                for(int j = i+1; j<n;j++){
+                for (int j = i + 1; j < n; j++) {
                     sum += x[j];
                 }
                 break;
