@@ -10,7 +10,7 @@ public class S_341 {
         int temp, max1 = 0, max2 = 0, min1 = 0, min2 = 0, min = Integer.MAX_VALUE, max = 0;
         Random random = new Random();
 
-        for(int i=0;i<5;i++) {
+        for (int i = 0; i < 5; i++) {
             do {
                 temp = random.nextInt(100);
             } while (Arrays.asList(a).indexOf(temp) != -1);
@@ -18,7 +18,7 @@ public class S_341 {
             System.out.println(a[i]);
         }
 
-        for(int i=0;i<4;i++) {
+        for (int i = 0; i < 4; i++) {
             for (int j = i + 1; j < 5; j++) {
                 if (Math.abs(a[i] - a[j]) > max) {
                     max = Math.abs(a[i] - a[j]);
