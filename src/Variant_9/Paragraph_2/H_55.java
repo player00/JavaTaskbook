@@ -4,7 +4,7 @@ import Helpers.HTools;
 
 public class H_55 {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         double a, b, c, d;
 
         a = HTools.readDouble("Введите a");

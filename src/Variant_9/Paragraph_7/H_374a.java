@@ -4,7 +4,7 @@ import Helpers.HTools;
 
 public class H_374a {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int n = HTools.readNatural(), count = 0;
         double[][] a = new double[n][n];
 
@@ -18,6 +18,7 @@ public class H_374a {
             }
             System.out.println();
         }
+
         System.out.println(count + " положительных элементов");
     }
 

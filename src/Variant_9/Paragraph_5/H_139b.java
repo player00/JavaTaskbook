@@ -4,7 +4,7 @@ import Helpers.HTools;
 
 public class H_139b {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int n = HTools.readNatural();
         int[] b = new int[n];
 

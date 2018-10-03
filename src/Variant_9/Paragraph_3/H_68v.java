@@ -8,7 +8,7 @@ public class H_68v {
         return x1 != x2 && x1 != x3 && x1 != x4 && x2 != x3 && x2 != x4 && x3 != x4;
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int n, x1, x2, x3, x4;
 
         n = HTools.readInt("Введите натуральное число", 0, 9999);

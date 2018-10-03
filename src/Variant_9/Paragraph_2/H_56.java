@@ -4,7 +4,7 @@ import Helpers.HTools;
 
 public class H_56 {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         double a, b, c, x, y;
         double min,mid,max;
 

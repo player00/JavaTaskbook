@@ -2,7 +2,7 @@ package Variant_9.Paragraph_7;
 
 public class H_334g {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         double sum = 0;
 
         for (int i = 1; i <= 100; i++) {

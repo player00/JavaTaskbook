@@ -4,7 +4,7 @@ import Helpers.HTools;
 
 public class H_67d {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int n, x;
 
         n = HTools.readInt("Введите натуральное число", 10, 100);
