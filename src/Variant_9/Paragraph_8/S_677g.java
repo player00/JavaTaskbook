@@ -24,18 +24,18 @@ public class S_677g {
             System.out.println();
         }
 
-        for (int i=0;i<n;i++){
-            for (int j=0;j<n;j++){
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
                 temp = 0;
-                if (i > j){
-                    for(int k = j;k <=i;k++){
-                        for(int l = j;l<=i;l++){
+                if (i > j) {
+                    for (int k = j; k <= i; k++) {
+                        for (int l = j; l <= i; l++) {
                             temp += a[k][l];
                         }
                     }
                 } else {
-                    for(int k = i;k <=j;k++){
-                        for(int l = i;l<=j;l++){
+                    for (int k = i; k <= j; k++) {
+                        for (int l = i; l <= j; l++) {
                             temp += a[k][l];
                         }
                     }
