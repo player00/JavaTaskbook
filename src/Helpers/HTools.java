@@ -160,4 +160,14 @@ public class HTools {
 
         return num;
     }
+
+    public static void showMatrix(int[][] a , int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.printf("%3d", a[i][j]);
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
 }

@@ -4,7 +4,7 @@ import Helpers.HTools;
 
 public class H_09 {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         double R = 0;
 

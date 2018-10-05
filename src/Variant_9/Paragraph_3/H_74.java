@@ -4,7 +4,7 @@ import Helpers.HTools;
 
 public class H_74 {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int age;
         String ageString, ageLast;
 

@@ -2,7 +2,7 @@ package Variant_9.Paragraph_5;
 
 public class H_163 {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         double[] a = new double[37], b = new double[37];
         boolean need = false;
 

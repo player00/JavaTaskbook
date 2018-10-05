@@ -4,7 +4,7 @@ import Helpers.HTools;
 
 public class H_78b {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         double a;
         int n;
 

@@ -13,7 +13,7 @@ public class H_136z {
         return fact;
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int n = HTools.readNatural();
         double sum = 0;
         double[] a = new double[n];

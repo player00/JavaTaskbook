@@ -1,8 +1,8 @@
 package Variant_9.Paragraph_7;
 
 public class H_341 {
-
-    public static void main(String args[]) {
+    //TODO читить очень вримательно задачу
+    public static void main(String[] args) {
         int n = 5;
         long[] a = new long[n];
         long min = 9999, max = -9999;

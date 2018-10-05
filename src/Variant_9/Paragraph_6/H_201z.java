@@ -4,7 +4,7 @@ import Helpers.HTools;
 
 public class H_201z {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int n = HTools.readNatural();
         double[] a = new double[n];
 

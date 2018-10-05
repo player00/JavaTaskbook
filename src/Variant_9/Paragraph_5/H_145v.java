@@ -2,7 +2,7 @@ package Variant_9.Paragraph_5;
 
 public class H_145v {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int n = 20;
         long[] x = new long[n];
 
