@@ -2,7 +2,7 @@ package Variant_9.Paragraph_7;
 
 public class H_334g {
 
-    public static void main(String[] args) {
+    private static double run(){
         double sum = 0;
 
         for (int i = 1; i <= 100; i++) {
@@ -11,7 +11,11 @@ public class H_334g {
             }
         }
 
-        System.out.println("Сумма равна: " + sum);
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Сумма равна: " + run());
     }
 
 }

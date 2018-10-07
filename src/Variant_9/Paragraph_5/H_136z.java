@@ -1,6 +1,7 @@
 package Variant_9.Paragraph_5;
 
-import Helpers.HTools;
+import static Helpers.HTools.readDouble;
+import static Helpers.HTools.readNatural;
 
 public class H_136z {
 
@@ -13,21 +14,26 @@ public class H_136z {
         return fact;
     }
 
-    public static void main(String[] args) {
-        int n = HTools.readNatural();
+    private static double run(double[] a, int n) {
         double sum = 0;
-        double[] a = new double[n];
-
-        for (int i = 0; i < n; i++) {
-            a[i] = HTools.readDouble("Введите a[" + (i + 1) + "]");
-        }
 
         for (int sign = -1, i = 0; i < n; i++) {
             sum += (sign * a[i]) / fact(i);
             sign = -sign;
         }
 
-        System.out.println("Сумма равна: " + sum);
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        int n = readNatural();
+        double[] a = new double[n];
+
+        for (int i = 0; i < n; i++) {
+            a[i] = readDouble("Введите a[" + (i + 1) + "]");
+        }
+
+        System.out.println("Сумма равна: " + run(a, n));
     }
 
 }

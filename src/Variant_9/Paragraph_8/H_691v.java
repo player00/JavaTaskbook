@@ -1,26 +1,22 @@
 package Variant_9.Paragraph_8;
 
-import Helpers.HTools;
+import static Helpers.HTools.showMatrix;
 
 public class H_691v {
 
-    public static void main(String args[]) {
-        int n = 8;
-        int[] a = new int[n * n];
-        int[][] b = new int[n][n];
-        String d = "u";
+    private static final int N = 8;
 
-        for (int i = 0; i < n * n; i++) {
-            a[i] = i + 1;
-        }
+    private static int[][] run(int[] a) {
+        int[][] b = new int[N][N];
+        String d = "u";
 
         int i = 0, j = 0;
 
         b[i][j] = a[0];
-        for (int k = 1; k < n * n; k++) {
+        for (int k = 1; k < N * N; k++) {
             switch (d) {
                 case "u":
-                    if (i - 1 >= 0 && j + 1 < n) {
+                    if (i - 1 >= 0 && j + 1 < N) {
                         i--;
                         j++;
                     } else if (i == 0) {
@@ -32,10 +28,10 @@ public class H_691v {
                     }
                     break;
                 case "d":
-                    if (j - 1 >= 0 && i + 1 < n) {
+                    if (j - 1 >= 0 && i + 1 < N) {
                         j--;
                         i++;
-                    } else if (j == 0 && i + 1 < n) {
+                    } else if (j == 0 && i + 1 < N) {
                         i++;
                         d = "u";
                     } else {
@@ -48,7 +44,17 @@ public class H_691v {
 
         }
 
-        HTools.showMatrix(b, n);
+        return b;
+    }
+
+    public static void main(String[] args) {
+        int[] a = new int[N * N];
+
+        for (int i = 0; i < N * N; i++) {
+            a[i] = i + 1;
+        }
+
+        showMatrix(run(a), N);
     }
 
 }

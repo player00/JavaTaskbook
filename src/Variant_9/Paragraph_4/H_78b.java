@@ -1,22 +1,24 @@
 package Variant_9.Paragraph_4;
 
-import Helpers.HTools;
+import static Helpers.HTools.readDouble;
+import static Helpers.HTools.readNatural;
 
 public class H_78b {
 
-    public static void main(String[] args) {
-        double a;
-        int n;
-
-        a = HTools.readDouble();
-        n = HTools.readNatural();
-
+    private static double run(double a, int n) {
         double mul = a;
         for (int i = 1; i < n; i++) {
             mul *= a + i;
         }
 
-        System.out.println("Произведение равно: " + mul);
+        return mul;
+    }
+
+    public static void main(String[] args) {
+        double a = readDouble();
+        int n = readNatural();
+
+        System.out.println("Произведение равно: " + run(a, n));
     }
 
 }

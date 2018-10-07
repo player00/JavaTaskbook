@@ -4,14 +4,9 @@ import Helpers.HTools;
 
 public class H_74 {
 
-    public static void main(String[] args) {
-        int age;
-        String ageString, ageLast;
-
-        age = HTools.readInt("Введите возраст", 0, 100);
-
-        ageString = Integer.toString(age);
-        ageLast = ageString.substring(ageString.length() - 1);
+    private static String run(int age) {
+        String ageString = Integer.toString(age);
+        String ageLast = ageString.substring(ageString.length() - 1);
 
         if (11 <= age && age <= 15) {
             ageString += " лет";
@@ -30,7 +25,14 @@ public class H_74 {
                     break;
             }
         }
-        System.out.println(ageString);
+
+        return ageString;
+    }
+
+    public static void main(String[] args) {
+        int age = HTools.readInt("Введите возраст", 0, 100);
+
+        System.out.println(run(age));
     }
 
 }

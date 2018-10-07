@@ -1,22 +1,20 @@
 package Variant_9.Paragraph_2;
 
-import Helpers.HTools;
+import static Helpers.HTools.readDouble;
 
 public class H_55 {
 
+    private static boolean run(double a, double b, double c, double d) {
+        return (a <= c && b <= d) || (a <= d && b <= c);
+    }
+
     public static void main(String[] args) {
-        double a, b, c, d;
+        double a = readDouble("Введите a");
+        double b = readDouble("Введите b");
+        double c = readDouble("Введите c");
+        double d = readDouble("Введите d");
 
-        a = HTools.readDouble("Введите a");
-        b = HTools.readDouble("Введите b");
-        c = HTools.readDouble("Введите c");
-        d = HTools.readDouble("Введите d");
-
-        if ((a <= c && b <= d) || (a <= d && b <= c)) {
-            System.out.print("Можно");
-        } else {
-            System.out.print("Нельзя");
-        }
+        System.out.print(run(a, b, c, d) ? "Можно" : "Нельзя");
     }
 
 }

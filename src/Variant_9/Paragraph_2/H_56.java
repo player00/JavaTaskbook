@@ -1,28 +1,28 @@
 package Variant_9.Paragraph_2;
 
-import Helpers.HTools;
+import static Helpers.HTools.readDouble;
+
+import static java.lang.Math.min;
+import static java.lang.Math.max;
 
 public class H_56 {
 
+    private static boolean run(double a, double b, double c, double x, double y) {
+        double min = min(min(a, b), c);
+        double max = max(max(a, b), c);
+        double mid = a + b + c - max - min;
+
+        return (min < min(x, y) && mid < max(x, y));
+    }
+
     public static void main(String[] args) {
-        double a, b, c, x, y;
-        double min,mid,max;
+        double a = readDouble("Введите a");
+        double b = readDouble("Введите b");
+        double c = readDouble("Введите c");
+        double x = readDouble("Введите x");
+        double y = readDouble("Введите y");
 
-        a = HTools.readDouble("Введите a");
-        b = HTools.readDouble("Введите b");
-        c = HTools.readDouble("Введите c");
-        x = HTools.readDouble("Введите x");
-        y = HTools.readDouble("Введите y");
-
-        min = Math.min(Math.min(a, b), c);
-        max = Math.max(Math.max(a, b), c);
-        mid = a + b + c - max - min;
-
-        if (min < Math.min(x, y) && mid < Math.max(x, y)) {
-            System.out.print("Пройдёт");
-        } else {
-            System.out.print("Не пройдёт");
-        }
+        System.out.println(run(a, b, c, x, y) ? "Пройдёт" : "Не пройдёт");
     }
 
 }
