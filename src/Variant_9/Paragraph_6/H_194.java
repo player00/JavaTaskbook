@@ -1,11 +1,14 @@
 package Variant_9.Paragraph_6;
 
-import Helpers.HTools;
+import static Helpers.HTools.readInt;
+import static Helpers.HTools.readNatural;
+import static java.lang.Math.random;
+import static java.lang.Math.round;
 
 public class H_194 {
 
-    public static void main(String[] args) {
-        int n = HTools.readNatural(), a = HTools.readInt(), sum = 0;
+    private static int run(int a, int n) {
+        int sum = 0;
         long[] x = new long[n];
         boolean need = false;
 
@@ -13,12 +16,16 @@ public class H_194 {
             if (need) {
                 sum += x[i];
             }
-            x[i] = Math.round(Math.random() * 20 - 10);
-            need |= x[i] == a;
+            x[i] = round(random() * 20 - 10);
+            need = need || (x[i] == a);
             System.out.printf("x[%2d] = %5d\n", i + 1, x[i]);
         }
 
-        System.out.println("Сумма равна: " + (need ? Integer.valueOf(sum).toString() : "-10"));
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Сумма равна: " + run(readInt(), readNatural()));
     }
 
 }

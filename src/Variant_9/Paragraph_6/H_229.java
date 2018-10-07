@@ -1,19 +1,24 @@
 package Variant_9.Paragraph_6;
 
-import Helpers.HTools;
+import static Helpers.HTools.readDouble;
 
 public class H_229 {
 
-    public static void main(String[] args) {
-        double x = HTools.readDouble("Введите x", 0);
-        double y = HTools.readDouble("Введите y", 1);
+    private static int run(double x, double y) {
         int k = 0;
 
-        while (!(Math.pow(y, k - 1) <= x && x < Math.pow(y, k))) {
+        while (!(Math.pow(y, k - 1) <= x && x < Math.pow(y, k)) || !(Math.pow(y, -k - 1) <= x && x < Math.pow(y, -k))) {
             k++;
         }
 
-        System.out.println("Результат: " + k);
+        return k;
+    }
+
+    public static void main(String[] args) {
+        double x = readDouble("Введите x", 0);
+        double y = readDouble("Введите y", 1);
+
+        System.out.println("Результат: " + run(x, y));
     }
 
 }

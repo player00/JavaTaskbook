@@ -1,21 +1,25 @@
 package Variant_9.Paragraph_4;
 
-import Helpers.HTools;
+import static Helpers.HTools.readNatural;
 
 public class H_87 {
 
-    public static void main(String[] args) {
-        int n, m, sum = 0;
-
-        n = HTools.readNatural("Введите натуральное число n");
-        m = HTools.readNatural("Введите натуральное число m");
+    private static int run(int n, int m) {
+        int sum = 0;
 
         for (int x = 1, i = 1; i <= m; i++) {
             x *= 10;
             sum += (n % x) / (x / 10);
         }
 
-        System.out.println("Сумма равна: " + sum);
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        int n = readNatural("Введите натуральное число n");
+        int m = readNatural("Введите натуральное число m");
+
+        System.out.println("Сумма равна: " + run(n, m));
     }
 
 }

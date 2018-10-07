@@ -1,25 +1,22 @@
 package Variant_9.Paragraph_8;
 
-import Helpers.HTools;
+import static Helpers.HTools.showMatrix;
+
+import static java.lang.Math.max;
+import static java.lang.Math.min;
 
 public class H_677g {
 
-    public static void main(String args[]) {
-        int n = HTools.readNatural();
-        int[][] a = new int[n][n];
-        int[][] b = new int[n][n];
+    private static final int N = 8;
 
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                a[i][j] = 1;
-            }
-        }
+    private static int[][] run(int[][] a) {
+        int[][] b = new int[N][N];
 
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
                 int s = 0;
-                int min = Math.min(i, j);
-                int max = Math.max(i, j);
+                int min = min(i, j);
+                int max = max(i, j);
                 for (int k = min; k <= max; k++) {
                     for (int z = min; z <= max; z++) {
                         s += a[k][z];
@@ -29,8 +26,20 @@ public class H_677g {
             }
         }
 
-        HTools.showMatrix(a, n);
-        HTools.showMatrix(b, n);
+        return b;
+    }
+
+    public static void main(String[] args) {
+        int[][] a = new int[N][N];
+
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                a[i][j] = 1;
+            }
+        }
+
+        showMatrix(a, N);
+        showMatrix(run(a), N);
     }
 
 }

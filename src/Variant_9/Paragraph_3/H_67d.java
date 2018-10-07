@@ -1,20 +1,19 @@
 package Variant_9.Paragraph_3;
 
-import Helpers.HTools;
+import static Helpers.HTools.readInt;
 
 public class H_67d {
 
+    private static int run(int n) {
+        int x = n / 10;
+
+        return (x > 10 ? 0 : x);
+    }
+
     public static void main(String[] args) {
-        int n, x;
+        int n = readInt("Введите натуральное число", 10, 100);
 
-        n = HTools.readInt("Введите натуральное число", 10, 100);
-
-        x = Math.floorDiv(n, 10);
-        if (x > 10) {
-            System.out.println(0);
-        } else {
-            System.out.println(x);
-        }
+        System.out.println(run(n));
     }
 
 }

@@ -2,6 +2,9 @@ package Helpers;
 
 import java.util.Scanner;
 
+import static java.lang.Math.random;
+import static java.lang.Math.round;
+
 public class HTools {
     private static Scanner in = new Scanner(System.in);
 
@@ -161,7 +164,7 @@ public class HTools {
         return num;
     }
 
-    public static void showMatrix(int[][] a , int n) {
+    public static void showMatrix(int[][] a, int n) {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 System.out.printf("%3d", a[i][j]);
@@ -169,5 +172,9 @@ public class HTools {
             System.out.println();
         }
         System.out.println();
+    }
+
+    public static long randomBetween(long a, long b) {
+        return round(random() * (b - a) + a);
     }
 }

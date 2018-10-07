@@ -1,20 +1,25 @@
 package Variant_9.Paragraph_4;
 
-import Helpers.HTools;
+import static Helpers.HTools.readNatural;
+
+import static java.lang.Math.pow;
 
 public class H_115b {
 
-    public static void main(String[] args) {
-        int n;
+    private static double run(int n) {
         double sum = 0;
 
-        n = HTools.readNatural("Введите натуральное число n");
-
         for (int i = 1; i <= n; i++) {
-            sum += 1 / Math.pow(i, 5);
+            sum += 1 / pow(i, 5);
         }
 
-        System.out.println("Сумма равна: " + sum);
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        int n = readNatural("Введите натуральное число n");
+
+        System.out.println("Сумма равна: " + run(n));
     }
 
 }
