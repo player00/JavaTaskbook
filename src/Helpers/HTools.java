@@ -2,6 +2,8 @@ package Helpers;
 
 import java.util.Scanner;
 
+import static Helpers.lang.Ru.*;
+
 import static java.lang.Math.random;
 import static java.lang.Math.round;
 
@@ -10,7 +12,7 @@ public class HTools {
 
     private static double checkDouble(Scanner scn) {
         while (!scn.hasNextDouble()) {
-            System.out.println("Вы ввели не правильно, попробуйте повторить");
+            System.out.println(INCORRECT_DOUBLE);
             scn.next();
         }
         return in.nextDouble();
@@ -18,7 +20,7 @@ public class HTools {
 
     private static int checkInt(Scanner scn) {
         while (!scn.hasNextInt()) {
-            System.out.println("Вы ввели не правильно, попробуйте повторить");
+            System.out.println(INCORRECT_INT);
             scn.next();
         }
         return in.nextInt();
@@ -38,7 +40,7 @@ public class HTools {
      * @return double
      */
     public static double readDouble() {
-        System.out.println("Введите действетельное число");
+        System.out.println(READ_DOUBLE);
 
         return checkDouble(in);
     }
@@ -68,7 +70,7 @@ public class HTools {
         double num = checkDouble(in);
 
         while (num < min) {
-            System.out.println("Вы ввели не правильно, попробуйте повторить");
+            System.out.println(INCORRECT_DOUBLE);
             num = in.nextDouble();
         }
 
@@ -89,7 +91,7 @@ public class HTools {
         double num = checkDouble(in);
 
         while (!isBetween(min, num, max)) {
-            System.out.println("Вы ввели не правильно, попробуйте повторить");
+            System.out.println(INCORRECT_DOUBLE);
             num = in.nextDouble();
         }
 
@@ -102,7 +104,7 @@ public class HTools {
      * @return int
      */
     public static int readInt() {
-        System.out.println("Введите целое число");
+        System.out.println(READ_INT);
 
         return checkInt(in);
     }
@@ -121,7 +123,7 @@ public class HTools {
         int num = checkInt(in);
 
         while (!isBetween(min, num, max)) {
-            System.out.println("Вы ввели не правильно, попробуйте повторить");
+            System.out.println(INCORRECT_INT);
             num = in.nextInt();
         }
 
@@ -134,12 +136,12 @@ public class HTools {
      * @return double
      */
     public static int readNatural() {
-        System.out.println("Введите натуральное число");
+        System.out.println(READ_NATUTAL);
 
         int num = checkInt(in);
 
         while (num < 1) {
-            System.out.println("Вы ввели не правильно, попробуйте повторить");
+            System.out.println(INCORRECT_INT);
             num = in.nextInt();
         }
 

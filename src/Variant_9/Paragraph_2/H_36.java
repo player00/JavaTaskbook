@@ -13,7 +13,7 @@ public class H_36 {
         double b = readDouble("Введите b");
         double c = readDouble("Введите c");
 
-        System.out.println("Неравенства" + (run(a, b, c) ? "" : " не ") + "выполняются");
+        System.out.println("Неравенства " + (run(a, b, c) ? "" : " не") + " выполняются");
     }
 
 }
